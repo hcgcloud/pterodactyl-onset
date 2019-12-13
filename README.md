@@ -6,6 +6,7 @@
 Pterodactyl eggs - Onset Dedicated Server
 
 ## Features
+- Allow administrators to set `Max Players` variable
 - Allow users to configure if they need `Auto Update` or not
 
 ## How to use
