@@ -10,3 +10,7 @@ Pterodactyl eggs - Onset Dedicated Server
 
 ## How to use
 Just simply import `egg-onset--linux.json` to your panel and then you can create a server.
+
+Also be noticed that you should allocate `port-1` for query and `port-2` for http server to a server.
+
+Reference: [https://dev.playonset.com/wiki/DedicatedServer](https://dev.playonset.com/wiki/DedicatedServer)
