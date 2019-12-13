@@ -3,14 +3,14 @@
     "meta": {
         "version": "PTDL_v1"
     },
-    "exported_at": "2019-12-13T20:56:11+08:00",
+    "exported_at": "2019-12-13T22:03:17+08:00",
     "name": "Onset-Linux",
     "author": "service@hcgcloud.com",
     "description": "Onset Linux",
     "image": "hcgcloud\/pterodactyl-onset:latest",
     "startup": ".\/start_linux.sh",
     "config": {
-        "files": "{\r\n    \"server_config.json\": {\r\n        \"parser\": \"json\",\r\n        \"find\": {\r\n            \"port\": \"{{server.build.default.port}}\",\r\n            \"ipaddress\": \"0.0.0.0\"\r\n        }\r\n    }\r\n}",
+        "files": "{\r\n    \"server_config.json\": {\r\n        \"parser\": \"json\",\r\n        \"find\": {\r\n            \"port\": \"{{server.build.default.port}}\",\r\n            \"ipaddress\": \"0.0.0.0\",\r\n            \"maxplayers\": \"{{server.build.env.MAX_PLAYERS}}\"\r\n        }\r\n    }\r\n}",
         "startup": "{\r\n    \"done\": \"Server loaded\",\r\n    \"userInteraction\": []\r\n}",
         "logs": "{\r\n    \"custom\": true,\r\n    \"location\": \"latest.log\"\r\n}",
         "stop": "^C"
@@ -31,6 +31,15 @@
             "user_viewable": 1,
             "user_editable": 1,
             "rules": "required|integer|between:0,1"
+        },
+        {
+            "name": "Max Players",
+            "description": "Max players allowed to play in the server",
+            "env_variable": "MAX_PLAYERS",
+            "default_value": "100",
+            "user_viewable": 1,
+            "user_editable": 0,
+            "rules": "required|integer|between:1,300"
         }
     ]
 }
