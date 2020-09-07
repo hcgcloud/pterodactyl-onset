@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:bionic
 
 MAINTAINER HCGCLOUD, <service@hcgcloud.com>
 
